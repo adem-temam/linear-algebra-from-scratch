@@ -7,15 +7,24 @@ A pure Python implementation of core linear algebra concepts, built entirely fro
 To gain a deep and practical understanding of linear algebra by implementing fundamental algorithms manually and clearly.
 
 ## Implemented
-- **Vectors**: Addition, subtraction, scalar multiplication, dot product, magnitude
-- **Matrices**: Shape, transpose, matrix multiplication
-- **Linear Systems**:
+- **Vectors**
+  - Addition
+  - Subtraction
+  - Scalar multiplication
+  - Dot product
+  - Magnitude
+- **Matrices**
+  - Shape
+  - Transpose
+  - Matrix multiplication
+- **Linear Systems**
   - Determinant (recursive and row-reduction methods)
   - Matrix inverse (Gauss–Jordan elimination)
   - Rank (row-reduction)
   - Linear system solver
 
 ## Example
+
 ```python
 from linear_algebra.matrices import multiply
 from linear_algebra.solve_linear_systems import solve
@@ -28,9 +37,31 @@ B = [[1.0, 0.0],
 
 print(multiply(A, B))
 # [[2.0, 1.0], [5.0, 3.0]]
+```
 
-# Solving Ax = b
+### Solving a Linear System
+
+In linear algebra, a system of equations can be written as:
+
+$A \cdot x = b$
+
+where:
+- **A** is a matrix of coefficients
+- **b** is a known vector
+- **x** is the unknown vector we want to find
+
+```python
 b = [1.0, 2.0]
 x = solve(A, b)
 print(x)
 # [1.0, -1.0]
+```
+
+This result means that the vector `x = [1.0, -1.0]` satisfies the equation $A \cdot x = b$.
+
+## Quick Run
+
+```bash
+python -m linear_algebra
+```
+
